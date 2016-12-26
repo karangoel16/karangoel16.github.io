@@ -42,22 +42,61 @@
   </script>
   <!--this is facebook script-->
   <style>
-  body{
-    font-family: font-family: "Comic Sans MS", "Comic Sans", cursive;
-  }
-  ul{
+  h1 {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 28px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 600;
+	line-height: 26.4px;
+}
+h3 {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 15.4px;
+}
+p {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 16px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+blockquote {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 30px;
+}
+pre {
+	font-family: "Andale Mono", AndaleMono, monospace;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 18.5714px;
+}
+ul
+{
     list-style-type: none;
     margin: 2px;
     padding: 0;
     overflow:hidden;
-     background-color: translucent;
-     opacity: 0.7;
-     background: #32CD32;
-     border-radius: 1em;
-  }
-  li{
+    background-color: translucent;
+    opacity: 0.7;
+    background: #ACC0FF;
+    border-radius: 1em;
+}
+li
+{
     float: right;
-  }
+}
 li a:hover {
     background-color: #111;
 }
@@ -70,24 +109,24 @@ a {
 }
 a div{
   transform: scale(0);
-opacity: 0;
+opacity: 0.1;
 transition: all .5s;
+display: block;
 }
 a:hover div{
   transform: scale(1);
-opacity: 1;
+opacity: 0.7;
 }
 #footer {
  position:fixed;
  bottom: 0px;
  width:100%;
- height:20px;   /* Height of the footer */
- background-color: #32CD32;
- opacity: 0.7;/*to reproduce opacity*/
+ height:30px;   /* Height of the footer */
+ background-color: #ACC0FF;
 }
   </style>
 </head>
-  <body style="background-color:#dce0d3;font-style:Comic-Sans MS;">
+  <body style="background-color:#dce0d3;font-family: 'Andale Mono', AndaleMono, monospace;">
     <!-- Preloader -->
 	<div id="preloader">
 	  <div id="load"></div>
@@ -96,7 +135,7 @@ opacity: 1;
     <div style="position:relative'" id="header">
     <img src="image/head1.jpg" height=100% width=100%>
     <!--<iframe src="main.html" height=50% width=100% style="border:none;"></frame>-->
-      <h1 style="position:absolute;top:50;left:60;color:#32CD32;font-style:Cooper Black;">Karan Goel</h1>
+      <h1 style="position:absolute;top:200;left:100;color:#ACC0FF;">Karan Goel</h1>
     </div>
     <div style="position:fixed;right:30;top:20;">
     <ul>
@@ -119,18 +158,21 @@ opacity: 1;
     <center>
     <h2>Project</h2>
   </center>
-    <div style="background-color:#e7ffc8">
+    <div >
     <center><h3><b>Top N-Hashtags using Fibonacci Heap</b></h3><br>
       Advanced Data Structure'Fall-2016</center>
       Fibonacci Heap Implementation(Priority Queue), so that we are able to get Top n Hastags from all the hastags , Algorithm was quite robust and was able to perform random number of get and update operation(In order of million).
-      <br>Link:<a href="pdf/Report_Fall_2016.pdf" ><font color="black"><b>Project Report</b></font></a><br>
-      Link:<a href="https://github.com/karangoel16/fibonacci-heap"><font color="black"><b>Github Code</b></font></a>
+      <ul style="width:280px;opacity:0.7px">
+        <li style="float:left"><a href="pdf/Report_Fall_2016.pdf" ><font color="black"><b>Project Report</b></font></a>
+        <li style="float:left"><a href="https://github.com/karangoel16/fibonacci-heap"><font color="black"><b>Github Code</b></font></a>
+      </ul>
     </div>
   </div>
+
   <div id="contact" >
         <p>Want to know more , or interested in<br>
-      <div style="position:absolute;right:5px;">
-          <a href="https://twitter.com/karangoel16"><img src="image/Twitter.jpeg"></a>
+      <div style="position:absolute;right:5px;background-color:#ACC0FF;opaque:0.7px;">
+          <a href="https://twitter.com/karangoel16" style="opaque:1px;"><img src="image/Twitter.jpeg"></a>
       <br>
       <a href="https://www.linkedin.com/pub/karan-goel/35/a62/b9b">
 
@@ -139,8 +181,8 @@ opacity: 1;
           </a>
     <br>
     <a href="mailto:karangoel16@ufl.edu?Subject=ContactWebsite" target="_top"><img src="image/email_icon.png" width="50px" Height="50px"></a>
-    </div>
-  </div>
+    <a href="https://www.facebook.com/karangoel"><img src="image/facebook_icon.png" width="50px" height="50px"></a>    </div>
+</div>
   <a id="footer_link">
     <div id="footer">
     <!--This is done to close the div of the footer-->
