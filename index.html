@@ -17,6 +17,21 @@
 <link href="color/default.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
   <script>
+  $(document).ready(function(){
+     $('body,html').animate({scrollTop: 156}, 800);
+   });
+  $('a[href^="#"]').on('click', function(event) {
+
+    var target = $(this.getAttribute('href'));
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
    $(document).ready(function() {
     $('#nav a').click(function(e) {
      e.preventDefault();
@@ -27,14 +42,16 @@
   <!--this is facebook script-->
   <style>
   body{
-    font-style: normal;
+    font-family: font-family: "Comic Sans MS", "Comic Sans", cursive;
   }
   ul{
     list-style-type: none;
     margin: 2px;
     padding: 0;
     overflow:hidden;
-    background: #32CD32;
+     background-color: translucent;
+     opacity: 0.7;
+     background: #32CD32;
   }
   li{
     float: right;
@@ -57,14 +74,14 @@ a {
 }
   </style>
 </head>
-  <body>
+  <body style="background-color:#dce0d3;font-style:Comic-Sans MS;">
     <!-- Preloader -->
 	<div id="preloader">
 	  <div id="load"></div>
 	</div>
   <header>
     <div style="position:relative'" id="header">
-    <img src="image/head1.jpg" height=80% width=100%>
+    <img src="image/head1.jpg" height=100% width=100%>
     <!--<iframe src="main.html" height=50% width=100% style="border:none;"></frame>-->
       <h1 style="position:absolute;top:50;left:60;color:#32CD32;font-style:Cooper Black;">Karan Goel</h1>
     </div>
@@ -72,17 +89,25 @@ a {
     <ul>
       <li><a href="#contact">Contact</a>
       <li><a href="#project">Project</a>
-      <li><a href="#header">About</a>
+      <li><a href="#about">About</a>
       <li><a href="#header">Home</a>
     </ul>
     </div>
   </header>
-  <div id="#project">
+  <div class="wow bounceInDown" data-wow-delay="0.4s">
+  <div id="about">
+    <center><h2>About Me<h2></center>
+    I am currently persuing Masters in Computer Science from University of Florida, It not only has helped me to gain knowledge about computers
+  , but also helped to know more about myself. I have been able to explore new hobbies and have met intresting people and experience different culture.
+  <br>
+</div>
+  </div>
+  <div id="project">
     <center>
     <h2>Project</h2>
   </center>
-    <div>
-    <center>Top N-Hashtags using Fibonacci Heap<br>
+    <div style="background-color:#e7ffc8">
+    <center><h3><b>Top N-Hashtags using Fibonacci Heap</b></h3><br>
       Advanced Data Structure'Fall-2016</center>
       Fibonacci Heap Implementation(Priority Queue), so that we are able to get Top n Hastags from all the hastags , Algorithm was quite robust and was able to perform random number of get and update operation(In order of million).
       <br>Link:<a href="pdf/Report_Fall_2016.pdf" ><font color="black"><b>Project Report</b></font></a><br>
